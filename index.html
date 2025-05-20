@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Real Estate Metrics Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#007BFF', // As per existing setup
+            secondary: '#6C757D',
+            dark: '#212529',
+            light: '#F8F9FA',
+            // investisgroup inspired colors (example, if requested to change)
+            // 'investis-blue': '#003A70',
+            // 'investis-gray': '#5F6A74',
+            // 'investis-light-gray': '#F0F2F5',
+          },
+          fontFamily: {
+            sans: ['Arial', 'sans-serif'], // As per existing setup
+            // investisgroup inspired font (example, if requested to change)
+            // sans: ['Roboto', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50 font-sans">
+  <div id="app" class="flex flex-col min-h-screen">
+    <header id="header" class="bg-white shadow-sm"></header>
+    <main class="flex-grow container mx-auto px-4 py-8">
+      <div id="dashboard-container" class="mb-10"></div>
+      <div id="property-grid-container"></div>
+    </main>
+    <footer class="bg-dark text-white py-6">
+      <div class="container mx-auto px-4">
+        <p class="text-center text-sm">© 2024 Real Estate Metrics Dashboard</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="utils/dataUtils.js"></script>
+  <script src="components/Header.js"></script>
+  <script src="components/MetricsCard.js"></script>
+  <script src="components/PropertyCard.js"></script>
+  <script src="components/Dashboard.js"></script>
+  <script src="components/PropertyGrid.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
+
+
+
+
+
