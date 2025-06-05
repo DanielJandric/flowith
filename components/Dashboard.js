@@ -50,8 +50,12 @@ const PIE_CHART_HOVER_BACKGROUNDS = PIE_CHART_BACKGROUNDS.map(color => color.rep
 
 
 function renderDashboard(container, consolidatedMetrics, properties) {
-  if (!container || !consolidatedMetrics || !properties) {
-    console.error('Dashboard: Missing container, consolidatedMetrics, or properties');
+  if (!container) {
+    console.error('Dashboard: Missing container.');
+    return;
+  }
+  if (!consolidatedMetrics || !properties) {
+    console.error('Dashboard: Missing consolidatedMetrics or properties');
     container.innerHTML = '<p class="text-red-500 text-center">Error: Dashboard data could not be loaded.</p>';
     return;
   }

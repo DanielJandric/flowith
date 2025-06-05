@@ -1,7 +1,11 @@
 // Property Grid component for displaying all properties
 function renderPropertyGrid(container, properties) {
-  if (!container || !properties) {
-    console.error('PropertyGrid: Missing container or properties array.');
+  if (!container) {
+    console.error('PropertyGrid: Missing container.');
+    return;
+  }
+  if (!properties) {
+    console.error('PropertyGrid: Missing properties array.');
     container.innerHTML = '<p class="text-red-500">Error: Properties could not be loaded.</p>';
     return;
   }
